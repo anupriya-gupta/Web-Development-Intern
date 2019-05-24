@@ -1,0 +1,63 @@
+/* ChoiceOption Component */
+.choiceOption {
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.choiceOption:hover {
+  background-color: #eefbfe;
+}
+
+.choiceOptionSelected {
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  background-color: #ADD8E6;
+}
+
+.cradioCustomButton {
+  position: absolute;
+  width: auto;
+  opacity: 0;
+}
+
+.cradioCustomButton,
+.cradioCustomLabel {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.cradioCustomLabel {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  font-size: 16px;
+}
+
+.cradioCustomButton ~ .cradioCustomLabel:before {
+  position: absolute;
+  top: 20px;
+  left: 38px;
+  width: 28px;
+  height: 28px;
+  opacity: 0;
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.cradioCustomButton:checked ~ .cradioCustomLabel:before {
+  content: '';
+  background: #8bc53f url(../../media/icon-check.svg) no-repeat;
+  background-size: 27px;
+  border-color: #8bc53f;
+}
